@@ -30,7 +30,9 @@ end
 
 
 def full?(board)
-   board.all? {|i| i == "X" || i == "O"}
+  board.all? do |position|
+    position == "X" || position == "O"
+  end
 end
 
 
