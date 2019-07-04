@@ -17,10 +17,10 @@ WIN_COMBINATIONS = [
 
 
 def won?(board)
-  WIN_COMBINATIONS.each do |win|
+  WIN_COMBINATIONS.each do |index|
   #  returns an array of matching indexes for a win
-  if win.all?{|y| board[y] == "X"}
-    return win
+  if index.all?{|y| board[y] == "X"}
+    return index
     elsif win.all?{|y| board[y] == "O"}
       return win
     end
@@ -41,8 +41,6 @@ end
 
 def over?(board)
     if full?(board) == true
-      return true
-    elsif !full?(board) && won?(board) == true
       return true
     end
   return false
