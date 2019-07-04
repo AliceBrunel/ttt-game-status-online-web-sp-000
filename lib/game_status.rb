@@ -18,14 +18,13 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   WIN_COMBINATIONS.each do |index|
-  #  returns an array of matching indexes for a win
-  if index.all?{|y| board[y] == "X"}
+  if index.all?{|i| board[i] == "X"}
     return index
-    elsif win.all?{|y| board[y] == "O"}
-      return win
+    elsif index.all?{|i| board[i] == "O"}
+      return index
     end
   end
-  return false # returns false for an empty board / a draw
+  return false
 end
 
 
