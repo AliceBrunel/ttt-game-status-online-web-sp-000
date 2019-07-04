@@ -15,6 +15,7 @@ WIN_COMBINATIONS = [
   [2,4,6]
 ]
 
+board = ["X", " ", " ", "O", "O", "O", "X", "X", " "]
 
 def won?(board)
   WIN_COMBINATIONS.each do |index|
